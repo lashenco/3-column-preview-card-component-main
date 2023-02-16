@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f2f2f2;
+}
+.holder{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'Lexend Deca';
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0 20px ;
+  margin-bottom: 50px;
+}
+.box{
+  padding: 50px;
+  color: #f2f2f2;
+}
+.box h2{
+  margin: 20px 0;
+  font-family: 'Big Shoulders Display';
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.box p{
+  font-size: 14px;
+  line-height:1.8;
+  color: #ffffffbf;
+  font-weight: 400;
+  margin-bottom:70px ;
+}
+button{
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  border-radius: 50px;
+  transition: .5s;
+}
+.sedans{
+  background-color: #e38826;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.sedans button{
+  color: #e38826;
+}
+.suvs{
+  background-color: #006970;
+}
+.suvs button{
+  color: #006970;
+}
+.luxury{
+  background-color: #004241;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.luxury button{
+  color: #004241;
+}
+
+@media (max-width:956px) {
+  .holder{
+    height: auto;
+    margin: 75px 0;
+  }
+  .sedans{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .suvs{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .luxury{
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+}
+@media (max-width:656px) {
+  .container{
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    overflow: auto;
+    padding: 50px 20px;
+  }
+  .sedans{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+    .suvs {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    }
+  .luxury{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+.box button:hover{
+  background-color: transparent;
+  color: #f2f2f2;
+}
